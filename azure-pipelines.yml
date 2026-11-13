@@ -85,6 +85,16 @@ stages:
               pathToSources: '$(System.DefaultWorkingDirectory)/src/main/java'
             displayName: 'Publicar Cobertura en Azure DevOps'
 
+  - stage: Security
+    displayName: 'Security'
+    jobs:
+      - job: snyk
+        displayName: 'Analisis Snyk'
+        steps:
+          - script: echo "Simulación de análisis de vulnerabilidades con el Snyk."
+            displayName: 'Analisis Vulnerabilidades'
+
+
   # ==========================================
   # STAGE 2: APROBACIÓN MANUAL (APPROVAL)
   # ==========================================
