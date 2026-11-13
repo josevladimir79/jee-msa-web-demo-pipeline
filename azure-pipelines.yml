@@ -100,7 +100,7 @@ stages:
   # ==========================================
   - stage: Approval
     displayName: 'Aprobar'
-    dependsOn: CI
+    dependsOn: Security
     condition: succeeded()
     jobs:
       - job: manual_gate
